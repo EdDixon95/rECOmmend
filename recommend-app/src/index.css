@@ -38,3 +38,20 @@ code {
   font-size: 17px;
   border-radius: 5px;
 }
+
+.fetch-button {
+  min-width: 75px;
+  margin-bottom: 5px;
+  padding: 5px;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #75ce68;
+  border: none;
+  color: #ffffff;
+  transition: all 0.5s;
+}
+
+.fetch-button:hover {
+  background-color: #f49293;
+}
