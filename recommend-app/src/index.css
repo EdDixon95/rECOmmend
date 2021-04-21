@@ -20,3 +20,38 @@ code {
   left: 0;
   width: 100%;
 }
+
+.form-control {
+  margin: 20px 0;
+  margin-right: 25px;
+}
+
+.form-control label {
+  display: block;
+}
+
+.form-control input {
+  width: 100%;
+  height: 40px;
+  margin: 5px;
+  padding: 3px 7px;
+  font-size: 17px;
+  border-radius: 5px;
+}
+
+.fetch-button {
+  min-width: 75px;
+  margin-bottom: 5px;
+  padding: 5px;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #75ce68;
+  border: none;
+  color: #ffffff;
+  transition: all 0.5s;
+}
+
+.fetch-button:hover {
+  background-color: #f49293;
+}
