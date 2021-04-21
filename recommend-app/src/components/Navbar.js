@@ -47,7 +47,14 @@ function Navbar({ onSignUp }) {
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/sign-up" className="nav-links-mobile" onClick={onSignUp}>
+            <Link
+              to="/sign-up"
+              className="nav-links-mobile"
+              onClick={() => {
+                onSignUp();
+                closeMobileMenu();
+              }}
+            >
               Sign Up
             </Link>
           </li>
