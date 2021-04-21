@@ -1,6 +1,6 @@
 .slider {
   position: sticky;
-  height: 60vh;
+  height: 30vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,7 +11,7 @@
 
 .image {
   width: 80%;
-  height: 80%;
+  height: 60%;
   max-height: 400px;
   max-width: 400px;
   border-radius: 10px;
