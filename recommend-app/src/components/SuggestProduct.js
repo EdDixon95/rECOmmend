@@ -9,20 +9,25 @@ const formReducer = (state, event) => {
 };
 
 function SuggestProduct() {
-  const [formData, setFormData] = useReducer(formReducer, {});
+  const [formInfo, setFormInfo] = useReducer(formReducer, {});
   const [submitting, setSubmitting] = useState(false);
   const handleSubmit = (event) => {
     event.preventDefault();
     setSubmitting(true);
 
+    var formdata = new FormData();
+    formdata.set("username", formInfo.username);
+    formdata.set("first_name", formInfo.first_name);
+    formdata.set("last_name", formInfo.last_name);
+
     fetch("http://127.0.0.1:8000/new_product/", {
       method: "POST",
-      body: formData,
+      body: formdata,
     });
   };
 
   const handleChange = (event) => {
-    setFormData({
+    setFormInfo({
       name: event.target.name,
       value: event.target.value,
     });
@@ -35,7 +40,7 @@ function SuggestProduct() {
         <div className="Submission">
           You are submitting the following:
           <ul>
-            {Object.entries(formData).map(([name, value]) => (
+            {Object.entries(formInfo).map(([name, value]) => (
               <li key={name}>
                 <strong>{name}</strong>:{value.toString()}
               </li>
@@ -51,7 +56,7 @@ function SuggestProduct() {
             <input
               name="Name"
               onChange={handleChange}
-              value={formData.Name || " "}
+              value={formInfo.Name || " "}
             />
           </label>
 
@@ -60,7 +65,7 @@ function SuggestProduct() {
             <input
               name="Description"
               onChange={handleChange}
-              value={formData.Description || " "}
+              value={formInfo.Description || " "}
             />
           </label>
 
@@ -69,7 +74,7 @@ function SuggestProduct() {
             <input
               name="Replacement"
               onChange={handleChange}
-              value={formData.Replacement || " "}
+              value={formInfo.Replacement || " "}
             />
           </label>
         </fieldset>
