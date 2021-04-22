@@ -19,7 +19,7 @@ const prevSlide = () => {
 if(!Array.isArray(slides) || slides.length <= 0) {
     return null;
 }
-
+   
 
     return (
         <section className="slider">
