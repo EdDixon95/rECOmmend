@@ -1,15 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Poppins", sans-serif;
+}
+
+.item-image {
+  size: 10px;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
 }
 
 .footer {
@@ -19,6 +23,34 @@ code {
   bottom: 0;
   left: 0;
   width: 100%;
+}
+.footer li {
+  list-style: none;
+}
+.fa-twitter,
+.fa-instagram,
+.fa-facebook {
+  margin: 15px;
+  font-size: 70px;
+}
+.fa-instagram {
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.fa-twitter {
+  color: rgba(26, 145, 218, 0.4);
+}
+.fa-facebook {
+  color: #3b5998;
 }
 
 .form-control {
@@ -54,4 +86,19 @@ code {
 
 .fetch-button:hover {
   background-color: #f49293;
+}
+
+h1 {
+  text-decoration: overline #8cc63f;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+}
+
+.shop {
+  width: 50%;
+  padding: 5px;
+  text-align: center;
 }

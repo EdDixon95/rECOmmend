@@ -1,5 +1,13 @@
+@media only screen and (max-device-width: 800px) {
+  .wrapper {
+    padding: 10%;
+    text-align: center;
+  }
+}
+
 .wrapper {
-  padding: 10px 500px;
+  padding-left: 25%;
+  padding-right: 25%;
   text-align: center;
 }
 
@@ -30,4 +38,8 @@
   color: #df2727;
   border-radius: 4px;
   border: 2px solid var(--primary);
+}
+
+h3 {
+  text-decoration: overline #8cc63f;
 }

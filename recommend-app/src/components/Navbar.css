@@ -64,7 +64,7 @@ img {
 }
 
 @media screen and (max-width: 960px) {
-  .NavbarItems {
+  .navbar-item {
     position: relative;
   }
 
@@ -83,7 +83,7 @@ img {
     top: 80px;
     left: -100%;
     opacity: 1;
-    transition: all 0.5s ease;
+    transition: all 0.5s ease-in-out;
   }
 
   .nav-menu.active {
@@ -102,7 +102,7 @@ img {
   }
 
   .nav-links:hover {
-    background-color: #1888ff;
+    background-color: #89a33c;
     border-radius: 0;
   }
 
@@ -115,7 +115,7 @@ img {
     /*transform: translate(25%, 50%);*/
   }
 
-  img {
+  .logo-image {
     height: 100%;
   }
 
@@ -149,7 +149,7 @@ img {
 
   .nav-links-mobile:hover {
     background: #fff;
-    color: #1888ff;
+    color: #89a33c;
     transition: 250ms;
   }
 

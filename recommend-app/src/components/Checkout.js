@@ -49,11 +49,14 @@ const Checkout = () => {
 
   return (
     <div>
+      <h1>Checkout</h1>
       <form className="checkout-form" onSubmit={onSubmit}>
         <div className="form-control">
           <label>Full Name: </label>
           <input
             type="text"
+            name="full name"
+            placeholder="John Doe"
             value={fullName}
             onChange={(e) => setFullName(e.target.value)}
           />
@@ -62,6 +65,8 @@ const Checkout = () => {
           <label>Address Line One: </label>
           <input
             type="text"
+            name="address"
+            placeholder="example address"
             value={address}
             onChange={(e) => setAddress(e.target.value)}
           />
@@ -70,6 +75,8 @@ const Checkout = () => {
           <label>City: </label>
           <input
             type="text"
+            name="city"
+            placeholder="example city"
             value={city}
             onChange={(e) => setCity(e.target.value)}
           />
@@ -78,6 +85,8 @@ const Checkout = () => {
           <label>State/County: </label>
           <input
             type="text"
+            name="state/county"
+            placeholder="example state/county"
             value={state}
             onChange={(e) => setState(e.target.value)}
           />
@@ -86,6 +95,8 @@ const Checkout = () => {
           <label>Postal Code: </label>
           <input
             type="text"
+            name="postalcode"
+            placeholder="example postal code"
             value={postalCode}
             onChange={(e) => setPostalCode(e.target.value)}
           />
@@ -94,11 +105,13 @@ const Checkout = () => {
           <label>Please enter your mobile phone number: </label>
           <input
             type="text"
+            name="phonenumber"
+            placeholder="example phone number"
             value={phoneNumber}
             onChange={(e) => setPhoneNumber(e.target.value)}
           />
         </div>
-        <input type="submit" value="Checkout" className="drop-btn" />
+        <input type="submit" value="Checkout" className="btn" />
       </form>
     </div>
   );

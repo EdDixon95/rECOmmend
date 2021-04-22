@@ -1,0 +1,31 @@
+.aboutUs {
+  margin: 0 auto;
+  /*margin-left: 15px;*/
+  width: 50%;
+}
+.aboutUs p:hover {
+  background-color: #1b1919;
+  color: white;
+}
+.aboutUs h1 {
+  color: black;
+  text-decoration: overline #8cc63f;
+}
+.aboutUs p {
+  border: 1px solid #8cc63f;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.brand {
+  background-color: #1b1919;
+  border-radius: 4px;
+  padding: 5px;
+  margin-right: 2px;
+}
+.brand-col-1 {
+  color: #f49293;
+}
+.brand-col-2 {
+  color: #74ce67;
+}

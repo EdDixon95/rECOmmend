@@ -30,7 +30,7 @@ function SuggestProduct() {
 
   return (
     <div className="wrapper">
-      <h1>Suggest A Product</h1>
+      <h3>Suggest A Product</h3>
       {submitting && (
         <div className="Submission">
           You are submitting the following:

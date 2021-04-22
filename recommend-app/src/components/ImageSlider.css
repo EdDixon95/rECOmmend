@@ -1,3 +1,8 @@
+h1 {
+  text-align: center;
+  text-decoration: overline #8cc63f;
+}
+
 .slider {
   position: sticky;
   height: 60vh;

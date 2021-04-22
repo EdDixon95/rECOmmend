@@ -41,6 +41,7 @@ function RegisterUser() {
 
   return (
     <div>
+      <h1>Sign Up</h1>
       <form className="register-form" onSubmit={handleSubmit}>
         <div className="form-control">
           <label>Username: </label>

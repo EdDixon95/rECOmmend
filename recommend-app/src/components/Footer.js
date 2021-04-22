@@ -1,14 +1,34 @@
 import React from "react";
 
 const Footer = () => (
-  <div className="footer">
-    <p>This is some content in sticky footer</p>
-    <ul>
-      <li>Contact Us</li>
-      <li>Terms & Conditions</li>
-      <li>Socials</li>
-    </ul>
-  </div>
+  <footer>
+    <div className="footer">
+      <div className="row">
+        <div class="column" id="col-1">
+          <ul>
+            <li>Contact Us</li>
+            <li>Terms & Conditions</li>
+            <li>Socials</li>
+          </ul>
+        </div>
+        <div class="column" id="col-2">
+          <span>
+            <i class="fab fa-instagram"></i>
+          </span>
+          <span>
+            <a>
+              <i class="fab fa-twitter"></i>
+            </a>
+          </span>
+          <span>
+            <a>
+              <i class="fab fa-facebook"></i>
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </footer>
 );
 
 export default Footer;

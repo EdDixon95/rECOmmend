@@ -37,6 +37,7 @@ function LogIn() {
 
   return (
     <div>
+      <h1>Log in</h1>
       <form className="register-form" onSubmit={handleSubmit}>
         <div className="form-control">
           <label>Username: </label>

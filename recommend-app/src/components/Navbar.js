@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 import logo from "../images/logo.png";
 
-function Navbar({ onSuggestion, onSignUp, onLogIn, onCheckout }) {
+function Navbar({ onSuggestion, onSignUp, onLogIn, onCheckout, onViewItems }) {
   const [click, setClick] = useState(false);
 
   const handleClick = () => setClick(!click); //enables toggle
@@ -15,7 +15,7 @@ function Navbar({ onSuggestion, onSignUp, onLogIn, onCheckout }) {
     <>
       <nav className="navbar">
         <Link to="/" className="navbar-logo">
-          <img src={logo} alt="Logo" />
+          <img className="logo-image" src={logo} alt="Logo" />
         </Link>
         <div className="menu-icon" onClick={handleClick}>
           <i className={click ? "fas fa-times" : "fas fa-bars"} />
@@ -27,14 +27,21 @@ function Navbar({ onSuggestion, onSignUp, onLogIn, onCheckout }) {
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/EcoShop" className="nav-links" onClick={closeMobileMenu}>
+            <Link
+              to="/"
+              className="nav-links"
+              onClick={() => {
+                onViewItems();
+                closeMobileMenu();
+              }}
+            >
               Eco Shop <i className="fas fa-leaf" />
             </Link>
           </li>
 
           <li className="nav-item">
             <Link
-              to="/suggest-a-product"
+              to="/"
               className="nav-links"
               onClick={() => {
                 onSuggestion();
@@ -46,7 +53,7 @@ function Navbar({ onSuggestion, onSignUp, onLogIn, onCheckout }) {
           </li>
           <li className="nav-item">
             <Link
-              to="/Log in"
+              to="/"
               className="nav-links"
               onClick={() => {
                 onLogIn();
@@ -59,7 +66,7 @@ function Navbar({ onSuggestion, onSignUp, onLogIn, onCheckout }) {
 
           <li className="nav-item">
             <Link
-              to="/sign-up"
+              to="/"
               className="nav-links-mobile"
               onClick={() => {
                 onSignUp();
@@ -70,7 +77,7 @@ function Navbar({ onSuggestion, onSignUp, onLogIn, onCheckout }) {
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/Checkout" className="nav-links" onClick={onCheckout}>
+            <Link to="/" className="nav-links" onClick={onCheckout}>
               Checkout <i class="fas fa-shopping-bag"></i>
             </Link>
           </li>
