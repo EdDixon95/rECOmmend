@@ -16,14 +16,10 @@ const Footer = () => (
             <i class="fab fa-instagram"></i>
           </span>
           <span>
-            <a>
-              <i class="fab fa-twitter"></i>
-            </a>
+            <i class="fab fa-twitter"></i>
           </span>
           <span>
-            <a>
-              <i class="fab fa-facebook"></i>
-            </a>
+            <i class="fab fa-facebook"></i>
           </span>
         </div>
       </div>
