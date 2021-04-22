@@ -1,5 +1,35 @@
 .wrapper {
     padding: 10px 500px;
     text-align: center;
+    
 }
 
+.wrapper fieldset {
+    background-color:  #89a33c;
+}
+
+.wrapper ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+.wrapper button {
+  padding: 8px 20px;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  color: #ffff;
+  cursor: pointer;
+  background-color: var(--primary);
+}
+
+.wrapper button:hover {
+    padding: 6px 18px;
+    transition: all 0.4s ease-out;
+    background-color: transparent;
+    color: #df2727;
+    border-radius: 4px;
+    border: 2px solid var(--primary);
+  }
+  
