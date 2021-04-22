@@ -20,10 +20,10 @@ function LogIn() {
     console.log(formdata);
     var requestOptions = {
       method: "POST",
-      body: formInfo,
+      body: formdata,
     };
 
-    fetch("http://127.0.0.1:8000/login/", requestOptions)
+    fetch("http://127.0.0.1:8000/accounts/login/", requestOptions)
       .then((response) => response.text())
       .then((result) => console.log(result))
       .catch((error) => console.log("error", error));

@@ -1,4 +1,4 @@
-import React, { useReducer } from "react";
+import React, { useState, useReducer } from "react";
 
 const formReducer = (state, event) => {
   return {
@@ -9,22 +9,24 @@ const formReducer = (state, event) => {
 
 function RegisterUser() {
   const [formInfo, setFormInfo] = useReducer(formReducer, {});
+  const [submitting, setSubmitting] = useState(false);
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    setSubmitting(true);
 
     var formdata = new FormData();
-    formdata.append("username", formInfo.username);
-    formdata.append("first_name", formInfo.first_name);
-    formdata.append("last_name", formInfo.lastName);
-    formdata.append("email", formInfo.email);
-    formdata.append("password1", formInfo.password);
-    formdata.append("password2", formInfo.password2);
+    formdata.set("username", formInfo.username);
+    formdata.set("first_name", formInfo.first_name);
+    formdata.set("last_name", formInfo.last_name);
+    formdata.set("email", formInfo.email);
+    formdata.set("password1", formInfo.password1);
+    formdata.set("password2", formInfo.password2);
 
     console.log(formdata);
     var requestOptions = {
       method: "POST",
-      body: formInfo,
+      body: formdata,
     };
 
     fetch("http://127.0.0.1:8000/register/", requestOptions)
@@ -42,6 +44,9 @@ function RegisterUser() {
   return (
     <div>
       <h1>Sign Up</h1>
+      {submitting && (
+        <h2>Hi {formInfo.first_name}, thanks for switching to sustainable!</h2>
+      )}
       <form className="register-form" onSubmit={handleSubmit}>
         <div className="form-control">
           <label>Username: </label>
