@@ -4,7 +4,14 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 import logo from "../images/logo.png";
 
-function Navbar({ onSuggestion, onSignUp, onLogIn, onCheckout, onViewItems }) {
+function Navbar({
+  onSuggestion,
+  onSignUp,
+  onLogIn,
+  onCheckout,
+  onViewItems,
+  onHome,
+}) {
   const [click, setClick] = useState(false);
 
   const handleClick = () => setClick(!click); //enables toggle
@@ -14,7 +21,14 @@ function Navbar({ onSuggestion, onSignUp, onLogIn, onCheckout, onViewItems }) {
   return (
     <>
       <nav className="navbar">
-        <Link to="/" className="navbar-logo">
+        <Link
+          to="/"
+          className="navbar-logo"
+          onClick={() => {
+            onHome();
+            closeMobileMenu();
+          }}
+        >
           <img className="logo-image" src={logo} alt="Logo" />
         </Link>
         <div className="menu-icon" onClick={handleClick}>
@@ -22,7 +36,14 @@ function Navbar({ onSuggestion, onSignUp, onLogIn, onCheckout, onViewItems }) {
         </div>
         <ul className={click ? "nav-menu active" : "nav-menu"}>
           <li className="nav-item">
-            <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+            <Link
+              to="/"
+              className="nav-links"
+              onClick={() => {
+                onHome();
+                closeMobileMenu();
+              }}
+            >
               Home
             </Link>
           </li>

@@ -27,6 +27,13 @@ function App() {
     <div className="App">
       <Router>
         <Navbar
+          onHome={() => {
+            setShowSignUp(false);
+            setShowLogIn(false);
+            setShowCheckout(false);
+            setShowItems(false);
+            setShowSuggestion(false);
+          }}
           onSuggestion={() => {
             setShowSuggestion(!showSuggestion);
             if (!showSuggestion) {
