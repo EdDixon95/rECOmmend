@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 import logo from "../images/logo.png";
 
-function Navbar( {onSuggestion, onSignUp } ) {
+function Navbar({ onSuggestion, onSignUp, onLogIn }) {
   const [click, setClick] = useState(false);
 
   const handleClick = () => setClick(!click); //enables toggle
@@ -36,13 +36,23 @@ function Navbar( {onSuggestion, onSignUp } ) {
             <Link
               to="/suggest-a-product"
               className="nav-links"
-              onClick={onSuggestion}
+              onClick={() => {
+                onSuggestion();
+                closeMobileMenu();
+              }}
             >
               Suggest A Product <i class="fas fa-question" />
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/Log in" className="nav-links" onClick={closeMobileMenu}>
+            <Link
+              to="/Log in"
+              className="nav-links"
+              onClick={() => {
+                onLogIn();
+                closeMobileMenu();
+              }}
+            >
               Log In <i class="fas fa-user-circle"></i>
             </Link>
           </li>
