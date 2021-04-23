@@ -88,7 +88,7 @@ function Navbar({
           <li className="nav-item">
             <Link
               to="/"
-              className="nav-links-mobile"
+              className="nav-links-mobile pc"
               onClick={() => {
                 onSignUp();
                 closeMobileMenu();

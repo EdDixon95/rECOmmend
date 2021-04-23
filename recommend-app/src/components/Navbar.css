@@ -5,11 +5,20 @@
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
-  width: 100%;
+  width: 103%;
 }
 
 img {
   height: 100%;
+}
+
+.pc {
+  padding-right: 10px;
+  margin-right: 10px;
+}
+
+.navbar-button {
+  margin: 8px;
 }
 
 .navbar-logo {
